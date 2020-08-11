@@ -1,0 +1,20 @@
+.good{
+    /* width: 300px; */
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px;
+}
+.good img {
+    width: 280px;
+    height: 280px;
+}
+.good button{
+    background-color: darkcyan;
+    border-color: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.good h3{
+    margin: 0 0 10px 0;
+}
