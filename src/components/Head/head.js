@@ -9,10 +9,9 @@ constructor(props) {
     super(props);
     this.state = {
         list: [],
-        flag: false
-     };
-     //this.getRequest();
-    
+        flag: false,
+        sum: 0
+     };    
 }
 
 componentDidMount(){
@@ -29,23 +28,30 @@ componentDidMount(){
 
 }
 
+handleSum = () => {
+    this.setState({
+        sum: this.state.sum + 1,
+    });
+
+}
+
     render() {
         return <div>
             <div className='head'>
                 <h1>Store</h1>
                 <img />
-                <p>sum</p>
+                <p>{this.state.sum}</p>
             </div>
             
             <div>
                 <div className='iphone'>
                     {
-                        this.state.flag?<Iphone iphoneList={this.state.list.slice(0,3)} flag = {this.state.flag}/>:null
+                        this.state.flag?<Iphone iphoneList={this.state.list.slice(0,3)} addCart = {this.handleSum}/>:null
                     }
                 </div>
                 <div className='huawei'>
                     {
-                        this.state.flag?<HUAWEI huaweiList = {this.state.list.slice(3)} flag = {this.state.flag}/>:null
+                        this.state.flag?<HUAWEI huaweiList = {this.state.list.slice(3)} addCart = {this.handleSum}/>:null
                     }
                 </div>
             </div>
