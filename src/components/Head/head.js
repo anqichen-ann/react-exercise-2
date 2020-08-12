@@ -1,5 +1,6 @@
 import React from 'react';
 import './head.css';
+import cart from '../../assets/cart.svg';
 import Iphone from '../Iphone/Iphone';
 import HUAWEI from '../HUAWEI/HUAWEI';
 
@@ -39,7 +40,7 @@ handleSum = () => {
         return <div>
             <div className='head'>
                 <h1>Store</h1>
-                <img />
+                <img src={cart}/>
                 <p>{this.state.sum}</p>
             </div>
             
